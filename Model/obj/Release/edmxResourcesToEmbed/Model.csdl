@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="testModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="testEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="blog" EntityType="testModel.blog" />
+    <EntitySet Name="users" EntityType="testModel.users" />
+  </EntityContainer>
+  <EntityType Name="blog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Content" Type="String" Nullable="false" MaxLength="5000" Unicode="false" FixedLength="false" />
+    <Property Name="createDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="updateTime" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="kindName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="areaName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="userName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="passWord" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="gender" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>

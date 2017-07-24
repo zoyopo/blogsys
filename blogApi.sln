@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blogApi", "blogApi\blogApi.csproj", "{1AEE7E75-5676-4AB3-BFEA-3EDD5A38BE7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "behindIdeas.DAL", "..\StrongConnectpPatform\webApp\behindIdeas.DAL\behindIdeas.DAL.csproj", "{A057CFA0-2297-4AED-8F49-DB1E4CD78E8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{F78D89ED-71B6-42C6-B933-C27845DDAB68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AEE7E75-5676-4AB3-BFEA-3EDD5A38BE7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AEE7E75-5676-4AB3-BFEA-3EDD5A38BE7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AEE7E75-5676-4AB3-BFEA-3EDD5A38BE7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AEE7E75-5676-4AB3-BFEA-3EDD5A38BE7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A057CFA0-2297-4AED-8F49-DB1E4CD78E8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A057CFA0-2297-4AED-8F49-DB1E4CD78E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A057CFA0-2297-4AED-8F49-DB1E4CD78E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A057CFA0-2297-4AED-8F49-DB1E4CD78E8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F78D89ED-71B6-42C6-B933-C27845DDAB68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F78D89ED-71B6-42C6-B933-C27845DDAB68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F78D89ED-71B6-42C6-B933-C27845DDAB68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F78D89ED-71B6-42C6-B933-C27845DDAB68}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
