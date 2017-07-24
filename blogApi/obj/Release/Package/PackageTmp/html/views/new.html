@@ -1,0 +1,51 @@
+<div id="new_wrapper">
+  <!--<div js-loading></div>-->
+    
+
+<form>
+ 
+    <section>
+        <h1>创建博客</h1>
+    </section>
+    <section>    
+        <label for="blog_area">博客属区:</label>
+        <select id="blog_area" ng-model="blogdetail.areaName">
+        
+            <option value="编程">编程</option>
+            <option value="读书">读书</option>
+            <option value="爱好">爱好</option>
+         
+        </select></br>
+    </section>
+    <section>    
+        <label for="blog_kind">博客类型:</label>
+        <select id="blog_kind" ng-model="blogdetail.kindName">
+        <option value="javascript技术">javascript技术</option>
+            <option value=".net技术">.net技术</option>
+            <option value="设计模式">设计模式</option>
+        </select></br>
+    </section>
+    <section>
+        <label for="blog_title">博客标题:</label>
+        <input id="blog_title" ng-model="blogdetail.title"></br>
+    </section>
+     <textarea name="editor1" id="blog_content" rows="10" cols="200">
+               写点什么.....
+            </textarea>
+        <div class="btn-submit">
+        <!--<button type="submit">保存</button> --> <button type="submit" ng-click="addBlogsubmit()">提交</button>
+           </div>
+  
+         
+           
+   
+</form>
+<!--<div comjs-loading></div>-->
+   <!--<js-loading></js-loading>-->
+    <link href="css/new.css" rel="stylesheet" />
+   
+   <!--<script defer src="../ckeditorjs/ckeditor.js" ></script>
+   <script defer> CKEDITOR.replace("blog_content");</script>-->
+
+</div> 
+ 

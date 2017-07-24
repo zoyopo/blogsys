@@ -1,0 +1,155 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+body{font-size: 1em;}
+ul li a{text-decoration: none;}
+ul li {list-style-type: none;}
+/*清除元素浮动*/
+.clearfix::after{
+  content: '.';
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+  }
+
+  /*标题导航栏样式*/
+  header nav> ul>li{
+    float: left;
+    }
+
+  /*定位导航栏*/
+  header nav  {
+    position: absolute;
+    left: 206px;
+    top: 10px;
+              }
+
+  header nav ul li a{
+    display: block;
+    padding: 3px 10px;
+    background-clip:padding-box;
+  }
+  
+
+header nav ul li{float: left;}
+header nav ul li:hover >a {background-color: red;}
+  #main_wrapper{
+  
+ 
+    width: 100%;
+  }
+  header{
+    background-color: black;
+    position: relative;
+    
+    }
+  header h1{
+    display: inline;
+   
+    color: white;
+  }
+/*左侧导航栏*/
+  /*#two_col_wrapper nav{
+    
+    float: left;
+   width: 210px;
+
+
+
+  }*/
+header+nav{
+  display: table-cell;
+   padding: 30px 10%;
+  background-color: aliceblue;
+  width: 30%;
+  }
+
+/*nav:last-child ul
+    {
+     
+    }*/
+    /*#two_col_wrapper nav ul
+    {
+      padding: 30px 55px;
+      background-color: aliceblue;
+    }*/
+    header+nav  ul li{padding: 6px 0px;}
+    #two_col_wrapper li a{
+    display: block;    
+  
+    background-clip:padding-box;
+
+     }
+   header+nav li a:hover{background-color: grey;}
+/*左侧导航栏与文章区两栏*/
+  /*#two_col_wrapper{width: 100%; float: left;margin-right: -252px;}*/
+  /*三栏*/
+  #three_col_wrapper{width: 100%;}
+  /*显示内容区*/
+  .article-areas{
+  display: table-cell; 
+  padding: 30px 20%;
+  width: 100%;
+  }
+
+  /*aside{
+  float: left;
+  
+  }*/
+  /*评论区*/
+  aside {width:250px;padding: 30px 10px; display: table-cell;}
+  footer{
+    background: black;
+    color: white;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    height: 5%;
+    }
+
+  article p{
+    margin: 10px 0px;
+    text-indent: 2em;
+    }
+
+    .blog-create{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    }
+    .blog-create a{text-decoration-line: none;color: #fff}
+    .blog-create a:hover{background: #adadae}
+    .article-areas article{
+      height: 80px;
+      margin: 31px 16px;
+      overflow:hidden;
+      line-height: 20px;
+      border: 1px outset;
+      cursor: pointer;
+    /* border-style: outset; */
+    
+   
+    
+    border-bottom-width: 2px;   
+      }
+      .article-box{
+        border: 1px solid #adadae;
+        margin: 6% 0;
+      }
+    /*.article-areas article p{
+       width: 43em;
+       white-space:nowrap;
+       text-overflow:ellipsis;
+      -o-text-overflow:ellipsis;
+       overflow:hidden;
+       }*/
+
+

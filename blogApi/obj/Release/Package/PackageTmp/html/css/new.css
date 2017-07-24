@@ -1,0 +1,71 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+
+h1{
+    letter-spacing: 0.5em;
+    text-align: center;
+}
+#new_wrapper{
+   
+        margin: 0 173px;
+    }
+    form{
+          padding: 0 42%;  
+           margin: 10px 0 0 -23%;
+        border: 0;
+    }
+    #cke_blog_content{
+        margin: 10px 0 0 0;
+    }
+
+    fieldset{
+      
+    }
+    form section{margin: 10px 0;}
+    label{padding-left: 41%;}
+   #blog_area,#blog_kind,#blog_title
+   {
+        width: 43%;
+        margin: 0 28%;
+        border-radius: 8px;
+        
+    }
+     #blog_area,#blog_kind  {padding: 0 13%;}
+     #blog_area,#blog_kind,#blog_title:focus{
+         background-color: aliceblue;
+     }
+    .btn-submit{
+            margin: 7% 43%
+    }
+    .btn-submit button{
+     display:inline-block;
+    padding:6px 12px;
+    margin-bottom:0;
+    font-size:14px;
+    font-weight:400;
+    line-height:1.42857143;
+    text-align:center;
+    white-space:nowrap;
+    vertical-align:middle;
+    -ms-touch-action:manipulation;
+    touch-action:manipulation;
+    cursor:pointer;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    background-image:none;
+    border:1px solid transparent;
+    border-radius:4px
+    }
+    .btn-submit button:hover{
+        color:#333;
+        text-decoration:none
+    }

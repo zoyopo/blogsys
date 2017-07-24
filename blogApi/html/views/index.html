@@ -1,0 +1,63 @@
+
+
+    <link href="css/test.css" rel="stylesheet" type="text/css" />
+
+
+
+    <div id="header" class="clearfix">
+        <section  ng-mouseleave="mouseLeaveFC()">
+            <h1>点滴</h1>
+            <nav id="first-level-menu">
+            <ul id='first-level-menu-ul'>
+                <li ng-repeat="area in areas"><a href="javascript:void(0);" ng-mouseover="clickEve($event)">{{area}}</a>             
+            </ul>
+            </nav>
+        <div class="login-part" ng-hide="if_login">
+            <i class="login-icon"></i>
+            <h3><a href="../html/login.html#!/index">登录</a></h3>            
+         </div>  
+         <div class="logined_info" ng-hide="login_info">
+             <i class="user-icon"></i>
+             <span>你好！</span><span ng-bind="username"></span>
+             <a href="../html/login.html#!/add">创建博客</a>
+         </div>
+         <!--vis_second_menu-->
+         <nav id="second-level-menu" ng-hide="vis_second_menu" >
+                <ul>
+                    <li ng-repeat="kind in kinds"><a href="javascript:void(0);" ng-click="kindClick($event)" >{{kind}}</a></li>
+                </ul>
+        </nav>
+        </section>
+        
+        <!--<aside>
+           <form>
+               <section>
+              <label for="username">用户名:</label><input type="text"/><br/>
+               </section>
+               <section>
+              <label for="password">密码:</label>  <input type="password"/><br/>
+               </section>
+               <section>
+              <button type="submit">登录</button>
+               </section>
+           </form>    
+        </aside>-->
+        <div class="content"></div>
+       
+    </div>
+    <div id="main-body">
+         <div class="pic-area">
+            <p>my Blog</p>
+            <!--<img src="p1.jpg"/>-->
+        </div>
+        <div id="main" class="clearfix">
+          
+            <div class="article-part" ng-hide="vis_blogs">
+               <repeat-dir></repeat-dir> 
+            </div>
+             <div id="article-detail" ng-hide="vis_finded">     
+               <blog-finded></blog-finded>
+             </div>
+        </div>
+    </div>
+

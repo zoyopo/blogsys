@@ -1,0 +1,41 @@
+
+<link href="css/index.css" rel="stylesheet" />
+    <div id="main_wrapper">
+      <header class="clearfix">
+        <h1>ZYP'S Blog</h1>
+          <!--页眉导航栏 -->
+        <nav>
+          <ul >
+            <li ng-repeat="area in areas"><a href="javascript:void(0);" ng-click="clickEve($event)">{{area}}</a>
+            </li>          
+          </ul>
+        </nav>
+        <div class="blog-create">
+          <a href="../html/login.html#!/add">创建博客</a>
+        </div>
+
+      </header>
+      <!--<div id="three_col_wrapper" class="clearfix">
+        <div id="two_col_wrapper">-->
+          <!-- 侧栏导肮-->
+
+       <nav>
+         <ul>
+           <li ng-repeat="kind in kinds"><a href="javascript:void(0);" ng-click="kindClick($event)">{{kind}}</a></li>              
+         </ul>
+       </nav>
+       <div class="article-areas" ng-hide="vis_blogs">
+      <repeat-dir></repeat-dir>       
+       </div>
+        <!--</div>-->
+      <div id="article-detail" ng-hide="vis_finded">
+      
+       <blog-finded></blog-finded>
+      </div>
+      <footer>
+        这是放置copyright的区域
+      </footer>
+        </div>
+    <!--</div>-->
+
+
