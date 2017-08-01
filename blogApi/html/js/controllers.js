@@ -1,11 +1,5 @@
-﻿var app = angular.module('formCtrlParts', ['oc.lazyLoad']);
-// app.config(['OAthProvider',function(OAthProvider){
-// OAthProvider.configure({
-// baseUrl
+﻿var app = angular.module('formCtrlParts', ['oc.lazyLoad','appService','directiveApp']);
 
-// })
-
-// }])
 app.controller('formCtrl', function ($scope, $http) {
     $scope.User = { userName: '', passWord: '' }
     if(sessionStorage.getItem('user')!=null){
@@ -40,18 +34,7 @@ app.controller('formCtrl', function ($scope, $http) {
     }
 
 })
-//用filter去将字符串转dom是不可行的，因为绑定的数据类型不包括dom
-// app.filter('strToDom',function(){
-// return function(str){ 
 
-//     var dm=angular.element(document.createElement('div'));
-//     dm.html(str);
-//     dm.addClass('blog-content');
-//     return dm[0];
-
-// }
-
-// })
 
 app.controller('upnavController', function ($scope, $http,$rootScope,blog_finder,requestFactory,requestLogicFactory) {
     $scope.areas = [];
@@ -69,71 +52,7 @@ app.controller('upnavController', function ($scope, $http,$rootScope,blog_finder
         'area':"",
         'kind':""
     }    
-    // var request = {
-    //     req: {
-    //         req_list: function (params) {
-    //             return {
-    //                 method: 'get',
-    //                 url: '../api/blog/loadBlog',
-    //                 params: params
-    //             }
-    //         },
-    //         req_areas: function (params) {
-    //             return {
-    //                 method: 'get',
-    //                 url: '../api/blog/loadAreas',
-    //                 headers: {
-    //                     'Content-Type': "application/json"
-    //                 }
-    //             }
-    //         },
-    //         req_kinds: function (params) {
-    //             return {
-    //                 method: 'get',
-    //                 url: '../api/blog/loadKinds',
-    //                 headers: {
-    //                     'Content-Type': "application/json"
-    //                 },
-    //                 params: params
-    //             }
-    //         },
-    //         req_blog_delete:function(params){
-    //            return{
-    //                method:'delete',
-    //                url:'../api/blog/Delete',
-    //                headers: {
-    //                     'Content-Type': "application/json"
-    //                 },
-    //                 data: params
-    //             }     
-    //         },
-    //         req_blog_update:function(params){
-    //               return{
-    //                method:'put',
-    //                url:'../api/blog/updateBlog',
-    //                headers: {
-    //                     'Content-Type': "application/json"
-    //                 },
-    //                 data: params
-    //             }
-    //         }
-    //     },
-    //         reqFuc: function (req, f, status) {
-    //             var response = {};
 
-    //             $http(req).then(function (res) {
-
-    //                 f(res, status);
-
-    //             }).catch(function (error) {
-
-    //                 f(error);
-    //             })
-
-    //         }
-
-        
-    // }
     var logic = {
         f1: function (el, status) {
             if (el.status == status) {
@@ -178,7 +97,7 @@ app.controller('upnavController', function ($scope, $http,$rootScope,blog_finder
     }
 
        
-    requestFactory.reqFuc(requestFactory.req.req_list(params), logic.f1, 200);
+    $scope.myPromise= requestFactory.reqFuc(requestFactory.req.req_list(params), logic.f1, 200);
 
 //登录之后逻辑
 if(sessionStorage.getItem('user')){
@@ -212,8 +131,8 @@ if(sessionStorage.getItem('user')){
         //     console.log(reason);
         //    }
         //    )
-        requestFactory.reqFuc(requestFactory.req.req_list(params),logic.f1, 200);
-        requestFactory.reqFuc(requestFactory.req.req_kinds(params),logic.f2, 200);
+        $scope.myPromise=  requestFactory.reqFuc(requestFactory.req.req_list(params),logic.f1, 200);
+        $scope.myPromise=requestFactory.reqFuc(requestFactory.req.req_kinds(params), logic.f2, 200);
         $scope.vis_second_menu=false;
     }
     $scope.mouseLeaveFC=function() {
@@ -226,7 +145,7 @@ if(sessionStorage.getItem('user')){
             'area':paramData,
             'kind':kind
         }
-        requestFactory.reqFuc(requestFactory.req.req_list(params),logic.f1, 200);
+        $scope.myPromise=  requestFactory.reqFuc(requestFactory.req.req_list(params),logic.f1, 200);
     }
     $scope.backToCat=function(){
           $scope.vis_finded=true;
@@ -272,7 +191,7 @@ $scope.deleteArticle=function(event){
      blogdetail.id=id;
      var conf=confirm('确认删除该篇文章吗?');
      if(conf){
-        requestFactory.reqFuc(requestFactory.req.req_blog_delete(blogdetail),logic.delete,200);
+         $scope.myPromise=   requestFactory.reqFuc(requestFactory.req.req_blog_delete(blogdetail),logic.delete,200);
      }
   
 }
