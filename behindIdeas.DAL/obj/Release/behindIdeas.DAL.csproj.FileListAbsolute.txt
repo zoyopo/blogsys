@@ -1,0 +1,13 @@
+F:\强交互web平台\webApp\StrongConnectpPatform\webApp\behindIdeas.DAL\bin\Release\behindIdeas.DAL.dll
+F:\强交互web平台\webApp\StrongConnectpPatform\webApp\behindIdeas.DAL\bin\Release\behindIdeas.DAL.pdb
+F:\强交互web平台\webApp\StrongConnectpPatform\webApp\behindIdeas.DAL\bin\Release\EntityFramework.6.0.0.0.Fakes.fakesconfig
+F:\强交互web平台\webApp\StrongConnectpPatform\webApp\behindIdeas.DAL\bin\Release\EntityFramework.dll
+F:\强交互web平台\webApp\StrongConnectpPatform\webApp\behindIdeas.DAL\bin\Release\EntityFramework.SqlServer.dll
+F:\强交互web平台\webApp\StrongConnectpPatform\webApp\behindIdeas.DAL\bin\Release\Microsoft.QualityTools.Testing.Fakes.dll
+F:\强交互web平台\webApp\StrongConnectpPatform\webApp\behindIdeas.DAL\bin\Release\Model.dll
+F:\强交互web平台\webApp\StrongConnectpPatform\webApp\behindIdeas.DAL\bin\Release\Model.pdb
+F:\强交互web平台\webApp\StrongConnectpPatform\webApp\behindIdeas.DAL\bin\Release\zh-Hans\Microsoft.QualityTools.Testing.Fakes.resources.dll
+F:\强交互web平台\webApp\StrongConnectpPatform\webApp\behindIdeas.DAL\obj\Release\behindIdeas.DAL.csprojFakesResolveAssemblyReference.cache
+F:\强交互web平台\webApp\StrongConnectpPatform\webApp\behindIdeas.DAL\obj\Release\behindIdeas.DAL.dll
+F:\强交互web平台\webApp\StrongConnectpPatform\webApp\behindIdeas.DAL\obj\Release\behindIdeas.DAL.pdb
+F:\强交互web平台\webApp\StrongConnectpPatform\webApp\behindIdeas.DAL\obj\Release\behindIdeas.DAL.csprojResolveAssemblyReference.cache
