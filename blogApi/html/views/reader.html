@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">
 		<meta name="format-detection" content="telephone=no">
-		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="../css/reset.css">
 		<style type="text/css">
 		
 			body{
@@ -233,7 +233,9 @@
         </div>
         <div id="fiction_chapter_title"></div>
         <section id="book_content">
-       
+       <h4></h4>
+	   <article>
+	   </article
         </section>
         <div class="m-button-bar">
             <ul class="u-tab">
@@ -283,12 +285,12 @@
     		</div>
 		 </div>
     </div>
-		<script src="lib/zepto.min.js"></script>
+		<script src="../js/zepto.min.js"></script>
 		<script>
 			window.jQuery = $;
 		</script>
-		<script src="js/jquery.base64.js"></script>
-		<script src="js/jquery.jsonp.js"></script>
+		<!-- <script src="js/jquery.base64.js"></script> -->
+		<!-- <script src="js/jquery.jsonp.js"></script> -->
 
 		<script>
 			(function(){
@@ -360,11 +362,13 @@
 			
 				function main(){
 					EventHanlder();
-					 ReaderModel=readerModel();
-					 UIFrame=readerBaseFrame(book_content);
-					ReaderModel.init().then(function(data){
-						UIFrame(data);						
-					});
+					 <!-- ReaderModel=readerModel(); -->
+					 <!-- UIFrame=readerBaseFrame(book_content); -->
+					<!-- ReaderModel.init().then(function(data){ -->
+						<!-- UIFrame(data);						 -->
+						
+					<!-- }); -->
+					loadData();
 				}
 				function readerModel(){
 					//实现数据交互的相关方法
@@ -488,6 +492,14 @@
 					container.html(parseChapterData(data));
 				  }
 				}
+				function loadData() {
+				$(function () {
+					var blog=JSON.parse(localStorage.getItem('blogFinded'));
+					$('#book_content h4').text(blog.title);
+					$('#book_content article').html(blog.Content);
+					
+				})
+			}
 				function EventHanlder(){
 					//todo 交互事件绑定
 					//4.0之前 click 300ms延迟

@@ -506,6 +506,7 @@
     <Content Include="html\css\index.css" />
     <Content Include="html\css\login.css" />
     <Content Include="html\css\new.css" />
+    <Content Include="html\index.html" />
     <Content Include="html\js\angular.min.js" />
     <Content Include="html\js\controller-formctrl.js" />
     <Content Include="html\js\controller-newblog.js" />
@@ -551,7 +552,6 @@
     <Content Include="html\js\wwwroot\lib\angular\index.js" />
     <Content Include="html\js\wwwroot\lib\query-string\query-string.js" />
     <Content Include="html\views\index.html" />
-    <Content Include="html\login.html" />
     <Content Include="html\views\login.html" />
     <Content Include="html\views\new.html" />
     <Content Include="Web.config">

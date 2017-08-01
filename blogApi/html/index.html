@@ -1,41 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="formApp">
+<head>
+  <title>Login Index</title>
+  <meta charset="utf-8">    
+  	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">
+	<meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <script src="js/angular.min.js"></script>
+   <script src="js/angular-ui-router.min.js"></script>
+    <link href="js/wwwroot/lib/angular-busy/dist/angular-busy.css" rel="stylesheet" />
+    <script src="js/wwwroot/lib/angular-busy/dist/angular-busy.js"></script>
+   <!--<script defer src="js/wwwroot/lib/angular-cookies/angular-cookies.min.js"></script>
+   <script defer src="js/wwwroot/lib/query-string/query-string.js"></script>
+   <script defer src="js/wwwroot/lib/angular-oauth2/dist/angular-oauth2.min.js"></script>   
+    -->
+</head>
+<body>
 
-<link href="css/index.css" rel="stylesheet" />
-    <div id="main_wrapper">
-      <header class="clearfix">
-        <h1>ZYP'S Blog</h1>
-          <!--页眉导航栏 -->
-        <nav>
-          <ul >
-            <li ng-repeat="area in areas"><a href="javascript:void(0);" ng-click="clickEve($event)">{{area}}</a>
-            </li>          
-          </ul>
-        </nav>
-        <div class="blog-create">
-          <a href="../html/login.html#!/add">创建博客</a>
-        </div>
+  
+    <div ui-view></div>
 
-      </header>
-      <!--<div id="three_col_wrapper" class="clearfix">
-        <div id="two_col_wrapper">-->
-          <!-- 侧栏导肮-->
+</body> 
+ <script src="js/app.js"></script>  
+<script src="js/ocLazyLoad.js"></script>
+<script src="js/oclazyload.config.js"></script>    
 
-       <nav>
-         <ul>
-           <li ng-repeat="kind in kinds"><a href="javascript:void(0);" ng-click="kindClick($event)">{{kind}}</a></li>              
-         </ul>
-       </nav>
-       <div class="article-areas" ng-hide="vis_blogs">
-      <repeat-dir></repeat-dir>       
-       </div>
-        <!--</div>-->
-      <div id="article-detail" ng-hide="vis_finded">
-      
-       <blog-finded></blog-finded>
-      </div>
-      <footer>
-        这是放置copyright的区域
-      </footer>
-        </div>
-    <!--</div>-->
-
-
+</html>
